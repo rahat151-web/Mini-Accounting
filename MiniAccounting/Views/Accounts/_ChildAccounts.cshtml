@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Accounts>
+
+@foreach (var account in Model)
+{
+    <li>
+        <span class="parent-account" data-id="@account.AccountId">
+            @account.AccountCode - @account.AccountName
+        </span>
+        <ul class="child-container"></ul>
+    </li>
+}

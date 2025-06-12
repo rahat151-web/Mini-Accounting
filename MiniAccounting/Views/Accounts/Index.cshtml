@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Accounts>
+
+<h2>Account Hierarchy</h2>
+
+<ul id="accountTree">
+    @foreach (var account in Model)
+    {
+            <li>
+                <span class="parent-account" data-id="@account.AccountId">
+                @account.AccountCode - @account.AccountName
+                </span>
+                <ul class="child-container"></ul>
+            </li>
+    }
+</ul>
+
+@section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(document).on("click", ".parent-account", function () {
+                var accountId = $(this).data("id");
+                var $childContainer = $(this).next(".child-container");
+
+                if ($childContainer.children().length === 0) {
+                    $.get('/Accounts/GetChildAccounts', { parentId: accountId }, function (data) {
+                        $childContainer.html(data);
+                    });
+                } else {
+                    $childContainer.toggle();
+                }
+            });
+        </script>
+}
