@@ -25,6 +25,10 @@ namespace MiniAccounting.Models
         [StringLength(50)]
         public string AccountType { get; set; }
 
+        public int? IsLeaf { get; set; }
+
+        public int? HasVoucher { get; set; }
+
        
     }
 }

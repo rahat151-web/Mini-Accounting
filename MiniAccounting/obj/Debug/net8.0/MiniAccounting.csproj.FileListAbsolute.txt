@@ -79,3 +79,4 @@ D:\.NetCore\MiniAccounting\MiniAccounting\obj\Debug\net8.0\refint\MiniAccounting
 D:\.NetCore\MiniAccounting\MiniAccounting\obj\Debug\net8.0\MiniAccounting.pdb
 D:\.NetCore\MiniAccounting\MiniAccounting\obj\Debug\net8.0\MiniAccounting.genruntimeconfig.cache
 D:\.NetCore\MiniAccounting\MiniAccounting\obj\Debug\net8.0\ref\MiniAccounting.dll
+D:\.NetCore\MiniAccounting\MiniAccounting\obj\Debug\net8.0\MiniAccounting.sourcelink.json

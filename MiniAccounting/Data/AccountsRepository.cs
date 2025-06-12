@@ -99,7 +99,9 @@ namespace MiniAccounting.Data
                     AccountCode = reader.GetString(1),
                     AccountName = reader.GetString(2),
                     ParentAccountId = reader.IsDBNull(3) ? null : reader.GetInt32(3),
-                    AccountType = reader.GetString(4)
+                    AccountType = reader.GetString(4),
+                    IsLeaf = reader.GetInt32(5),
+                    HasVoucher = reader.GetInt32(6)
                 });
             }
 
