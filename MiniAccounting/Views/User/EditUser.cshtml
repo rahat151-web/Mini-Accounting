@@ -1,0 +1,80 @@
+﻿@model MiniAccounting.Models.Users.UserModel
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h2 class="mb-4 text-center">Edit User</h2>
+
+<form asp-action="UpdateUser" method="post" class="w-50 mx-auto">
+
+    @* Hidden Id *@
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group mb-3">
+        <label asp-for="UserName" class="form-label"></label>
+        <input asp-for="UserName" class="form-control"  disabled/>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="PhoneNumber" class="form-label"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="RoleName" class="form-label"></label>
+        <select asp-for="RoleName" class="form-control">
+            <option value="@Model.RoleName">@Model.RoleName</option>
+
+            @if (Model.RoleName != "Viewer")
+            {
+                <option value="Viewer">Viewer</option>
+            }
+            @if (Model.RoleName != "Accountant")
+            {
+                <option value="Accountant">Accountant</option>
+            }
+            
+        </select>
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3 text-center">
+        <button type="button" class="btn btn-outline-primary btn-lg" id="changePasswordBtn">
+            <i class="bi bi-key"></i> Change Password
+        </button>
+    </div>
+
+
+    
+
+    <div id="passwordSection" class="form-group mb-3" style="display:none;">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary me-2">Update</button>
+        <a asp-action="GetAllUsersDetails" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    
+
+    <script>
+        $(document).ready(function () {
+            $('#changePasswordBtn').click(function () {
+                $('#passwordSection').slideToggle();
+            });
+        });
+    </script>
+}

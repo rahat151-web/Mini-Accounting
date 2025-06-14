@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.SqlClient;
+using MiniAccounting.Models;
+using MiniAccounting.Models.Users;
 using System.Data;
 using System.Reflection;
 
@@ -71,6 +73,71 @@ namespace MiniAccounting.Data
 
                 return false;
             }
+        }
+
+        public async Task<List<UserModel>> GetUserDetailsAsync()
+        {
+            List<UserModel> allUsers = new();
+
+            using SqlConnection con = new(_connectionString);
+            using SqlCommand cmd = new("select a.Id, a.UserName, a.Email, c.Name, a.PhoneNumber " +
+                "From AspNetUsers a Inner JOIN AspNetUserRoles b " +
+                "ON a.Id = b.UserId " +
+                "Inner JOIN AspNetRoles c " +
+                "ON b.RoleId = c.Id;", con);
+
+                await con.OpenAsync();
+                using SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    allUsers.Add(new UserModel
+                    { 
+                        Id = reader.GetString(0),
+                        UserName = reader.GetString(1),
+                        Email = reader.GetString(2),
+                        RoleName = reader.GetString(3),
+                        PhoneNumber = reader.GetString(4)
+
+
+                    });
+                }
+
+                return allUsers;
+            
+        }
+
+        public async Task<UserModel> GetUserDataAsync(string Id)
+        {
+            UserModel user = new UserModel();
+
+            using SqlConnection con = new(_connectionString);
+            using SqlCommand cmd = new("select a.Id, a.UserName, a.Email, c.Name, a.PhoneNumber " +
+                "From AspNetUsers a Inner JOIN AspNetUserRoles b " +
+                "ON a.Id = b.UserId " +
+                "Inner JOIN AspNetRoles c " +
+                "ON b.RoleId = c.Id " +
+                "WHERE a.Id = @UserId", con);
+
+            cmd.Parameters.AddWithValue("@UserId", Id);
+
+            await con.OpenAsync();
+            using SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+
+                user.Id = reader.GetString(0);
+                user.UserName = reader.GetString(1);
+                user.Email = reader.GetString(2);
+                user.RoleName = reader.GetString(3);
+                user.PhoneNumber = reader.GetString(4);
+
+
+               
+            }
+
+            return user;
+
+
         }
 
     }

@@ -56,7 +56,7 @@ namespace MiniAccounting.Controllers
 
                     await _repository.ManageUserAsync("INSERT", user, model.RoleName);
 
-                    return RedirectToAction("Index");
+                    return RedirectToAction("GetAllUsersDetails");
                 }
 
                 return View(model);
@@ -73,33 +73,60 @@ namespace MiniAccounting.Controllers
         }
 
         // UPDATE
-        [HttpPut("update")]
-        public async Task<IActionResult> UpdateUser([FromBody] UpdateUserModel model)
+        [HttpPost]
+        public async Task<IActionResult> UpdateUser(UserModel model)
         {
-            var user = new IdentityUser
+            try
             {
-                Id = model.Id,
-                UserName = model.UserName,
-                NormalizedUserName = model.UserName.ToUpper(),
-                Email = model.Email,
-                NormalizedEmail = model.Email.ToUpper(),
-                EmailConfirmed = true,
-                SecurityStamp = Guid.NewGuid().ToString(),
-                ConcurrencyStamp = Guid.NewGuid().ToString(),
-                PhoneNumber = model.PhoneNumber,
-                PhoneNumberConfirmed = true,
-                TwoFactorEnabled = false,
-                LockoutEnd = null,
-                LockoutEnabled = true,
-                AccessFailedCount = 0
-            };
+                if(ModelState.IsValid)
+                {
+                    var user = new IdentityUser
+                    {
+                        Id = model.Id,
+                        Email = model.Email,
+                        NormalizedEmail = model.Email.ToUpper(),
+                        EmailConfirmed = true,
+                        SecurityStamp = Guid.NewGuid().ToString(),
+                        ConcurrencyStamp = Guid.NewGuid().ToString(),
+                        PhoneNumber = model.PhoneNumber,
+                        PhoneNumberConfirmed = true,
+                        TwoFactorEnabled = false,
+                        LockoutEnd = null,
+                        LockoutEnabled = true,
+                        AccessFailedCount = 0
+                    };
 
-            var passwordHasher = new PasswordHasher<IdentityUser>();
-            user.PasswordHash = passwordHasher.HashPassword(user, model.Password);
 
-            await _repository.ManageUserAsync("UPDATE", user, model.RoleName);
+                    if (model.Password == null)
+                    {
+                        user.PasswordHash = null;
+                    }
 
-            return Ok("User updated successfully");
+                    else
+                    {
+                        var passwordHasher = new PasswordHasher<IdentityUser>();
+                        user.PasswordHash = passwordHasher.HashPassword(user, model.Password);
+                    }
+
+
+                    await _repository.ManageUserAsync("UPDATE", user, model.RoleName);
+
+                    return RedirectToAction("GetAllUsersDetails");
+                }
+
+                return View(model);
+            }
+
+            catch (RepositoryException ex)
+            {
+                //add some message for showing
+                return RedirectToAction("GetAllUsersDetails");
+            }
+
+
+
+
+
         }
 
         // DELETE
@@ -114,6 +141,24 @@ namespace MiniAccounting.Controllers
             await _repository.ManageUserAsync("DELETE", user, null);
 
             return Ok("User deleted successfully");
+        }
+
+        [HttpGet]
+
+        public async Task<IActionResult> GetAllUsersDetails()
+        {
+            var data = await _repository.GetUserDetailsAsync();
+
+            return View(data);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditUser(string Id)
+        {
+            var data = await _repository.GetUserDataAsync(Id);
+
+            return View(data);
         }
     }
 }

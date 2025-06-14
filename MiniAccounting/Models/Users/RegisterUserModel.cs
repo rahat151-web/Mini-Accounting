@@ -5,6 +5,9 @@ namespace MiniAccounting.Models.Users
 {
     public class RegisterUserModel
     {
+
+        
+
         [Required]
         public string UserName { get; set; }
 
@@ -13,7 +16,7 @@ namespace MiniAccounting.Models.Users
         public string Email { get; set; }
 
         [Required]
-        [StrongPassword]
+        //[StrongPassword]
         public string Password { get; set; }
 
         [Required]
