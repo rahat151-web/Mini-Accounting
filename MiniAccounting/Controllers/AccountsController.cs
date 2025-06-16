@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using MiniAccounting.Data;
 using MiniAccounting.Exceptions;
 using MiniAccounting.Models;
@@ -8,6 +9,7 @@ namespace MiniAccounting.Controllers
     public class AccountsController : Controller
     {
         private readonly AccountsRepository _repository;
+        
         public AccountsController(AccountsRepository repository)
         {
             _repository = repository;

@@ -108,6 +108,36 @@ namespace MiniAccounting.Data
             return accounts;
         }
 
+        public List<string> GetLeafAccounts()
+        {
+            var accounts = new List<string>();
+
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                var sql = @"
+            SELECT A.AccountCode 
+            FROM Accounts A
+            WHERE NOT EXISTS (
+                SELECT 1 FROM Accounts C WHERE C.ParentAccountId = A.AccountId
+            )";
+
+                using (var cmd = new SqlCommand(sql, conn))
+                {
+                    conn.Open();
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            accounts.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return accounts;
+        }
+
+
 
     }
 }

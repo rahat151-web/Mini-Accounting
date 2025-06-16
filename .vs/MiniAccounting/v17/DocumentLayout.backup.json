@@ -3,68 +3,88 @@
   "WorkspaceRootPath": "D:\\.NetCore\\MiniAccounting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\helpers\\moduleauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\helpers\\moduleauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\user\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\user\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\users\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\users\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\vouchercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\users\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\users\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\home\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\home\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\data\\manageusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\data\\manageusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\user\\getallusersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\user\\getallusersdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\accounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\user\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\user\\registeruser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\voucher\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\voucher\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\data\\accountsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\data\\accountsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\validators\\strongpasswordattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\validators\\strongpasswordattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\vouchermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\vouchermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\data\\manageusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\data\\manageusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\data\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\data\\voucherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\services\\authorizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\rolepermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\models\\voucherdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\models\\voucherdetailmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|d:\\.netcore\\miniaccounting\\miniaccounting\\helpers\\datatablehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F76F16F9-5F04-4348-A176-F45F6CA1B6EC}|MiniAccounting\\MiniAccounting.csproj|solutionrelative:miniaccounting\\helpers\\datatablehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,8 +94,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1051,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "MiniAccounting\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T02:49:08.115Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -102,209 +135,250 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACsAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Home\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "MiniAccounting\\Views\\Home\\AccessDenied.cshtml",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Home\\AccessDenied.cshtml",
+              "RelativeToolTip": "MiniAccounting\\Views\\Home\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T04:06:33.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T04:06:20.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T04:06:19.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Accounts\\Index.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\Accounts\\Index.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Accounts\\Index.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\Accounts\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T04:03:44.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditUser.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\EditUser.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\User\\EditUser.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\EditUser.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\User\\EditUser.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T04:00:38.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAllUsersDetails.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\GetAllUsersDetails.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\User\\GetAllUsersDetails.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\GetAllUsersDetails.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\User\\GetAllUsersDetails.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-14T02:51:41.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "StrongPasswordAttribute.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Validators\\StrongPasswordAttribute.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Validators\\StrongPasswordAttribute.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Validators\\StrongPasswordAttribute.cs",
-              "RelativeToolTip": "MiniAccounting\\Validators\\StrongPasswordAttribute.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T05:56:24.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RegisterUser.cshtml",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\RegisterUser.cshtml",
-              "RelativeDocumentMoniker": "MiniAccounting\\Views\\User\\RegisterUser.cshtml",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\User\\RegisterUser.cshtml",
-              "RelativeToolTip": "MiniAccounting\\Views\\User\\RegisterUser.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-13T05:31:05.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Users\\UserModel.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Models\\Users\\UserModel.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Users\\UserModel.cs",
-              "RelativeToolTip": "MiniAccounting\\Models\\Users\\UserModel.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T05:18:39.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RegisterUserModel.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Users\\RegisterUserModel.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Models\\Users\\RegisterUserModel.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Users\\RegisterUserModel.cs",
-              "RelativeToolTip": "MiniAccounting\\Models\\Users\\RegisterUserModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T05:17:59.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\UserController.cs",
-              "RelativeToolTip": "MiniAccounting\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAqwFwAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T05:13:45.221Z",
+              "WhenOpened": "2025-06-15T12:40:05.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MiniAccounting\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T12:39:05.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ManageUsersRepository.cs",
               "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\ManageUsersRepository.cs",
               "RelativeDocumentMoniker": "MiniAccounting\\Data\\ManageUsersRepository.cs",
               "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\ManageUsersRepository.cs",
               "RelativeToolTip": "MiniAccounting\\Data\\ManageUsersRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAhwCoAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAIwGYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T05:00:44.634Z",
+              "WhenOpened": "2025-06-15T11:58:27.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\UserRepository.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Data\\UserRepository.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\UserRepository.cs",
+              "RelativeToolTip": "MiniAccounting\\Data\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T11:57:55.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Program.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Program.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Program.cs",
-              "RelativeToolTip": "MiniAccounting\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ModuleAuthorizeAttribute.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Helpers\\ModuleAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Helpers\\ModuleAuthorizeAttribute.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Helpers\\ModuleAuthorizeAttribute.cs",
+              "RelativeToolTip": "MiniAccounting\\Helpers\\ModuleAuthorizeAttribute.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwBkAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T02:50:34.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "MiniAccounting\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCUAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T02:49:08.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AccountsRepository.cs",
-              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\AccountsRepository.cs",
-              "RelativeDocumentMoniker": "MiniAccounting\\Data\\AccountsRepository.cs",
-              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\AccountsRepository.cs",
-              "RelativeToolTip": "MiniAccounting\\Data\\AccountsRepository.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowFcAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T02:11:35.425Z",
+              "WhenOpened": "2025-06-15T10:52:08.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "AuthorizationService.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Services\\AuthorizationService.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Services\\AuthorizationService.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Services\\AuthorizationService.cs",
+              "RelativeToolTip": "MiniAccounting\\Services\\AuthorizationService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAIA9wBAAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:32:24.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\UserController.cs",
+              "RelativeToolTip": "MiniAccounting\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:15:10.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "MiniAccounting\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "MiniAccounting\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-15T10:12:46.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MiniAccounting\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAewBkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:06:48.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RolePermission.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\RolePermission.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Models\\RolePermission.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\RolePermission.cs",
+              "RelativeToolTip": "MiniAccounting\\Models\\RolePermission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:05:30.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Models\\LoginViewModel.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "MiniAccounting\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T10:04:49.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Accounts.cs",
               "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Accounts.cs",
               "RelativeDocumentMoniker": "MiniAccounting\\Models\\Accounts.cs",
               "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\Accounts.cs",
               "RelativeToolTip": "MiniAccounting\\Models\\Accounts.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T02:05:40.19Z",
+              "WhenOpened": "2025-06-14T18:43:10.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Voucher\\Create.cshtml",
+              "RelativeDocumentMoniker": "MiniAccounting\\Views\\Voucher\\Create.cshtml",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Views\\Voucher\\Create.cshtml",
+              "RelativeToolTip": "MiniAccounting\\Views\\Voucher\\Create.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvy8AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-14T18:28:05.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VoucherController.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\VoucherController.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Controllers\\VoucherController.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Controllers\\VoucherController.cs",
+              "RelativeToolTip": "MiniAccounting\\Controllers\\VoucherController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T18:19:55.928Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VoucherModel.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\VoucherModel.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Models\\VoucherModel.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\VoucherModel.cs",
+              "RelativeToolTip": "MiniAccounting\\Models\\VoucherModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T18:18:44.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VoucherDetailModel.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\VoucherDetailModel.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Models\\VoucherDetailModel.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Models\\VoucherDetailModel.cs",
+              "RelativeToolTip": "MiniAccounting\\Models\\VoucherDetailModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T18:14:40.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DataTableHelper.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Helpers\\DataTableHelper.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Helpers\\DataTableHelper.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Helpers\\DataTableHelper.cs",
+              "RelativeToolTip": "MiniAccounting\\Helpers\\DataTableHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T18:13:23.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VoucherRepository.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\VoucherRepository.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Data\\VoucherRepository.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\VoucherRepository.cs",
+              "RelativeToolTip": "MiniAccounting\\Data\\VoucherRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T18:08:34.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Program.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Program.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Program.cs",
+              "RelativeToolTip": "MiniAccounting\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T02:50:34.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountsRepository.cs",
+              "DocumentMoniker": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\AccountsRepository.cs",
+              "RelativeDocumentMoniker": "MiniAccounting\\Data\\AccountsRepository.cs",
+              "ToolTip": "D:\\.NetCore\\MiniAccounting\\MiniAccounting\\Data\\AccountsRepository.cs",
+              "RelativeToolTip": "MiniAccounting\\Data\\AccountsRepository.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAewIMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T02:11:35.425Z"
             }
           ]
         }

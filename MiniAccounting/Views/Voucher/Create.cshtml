@@ -1,0 +1,192 @@
+﻿@model VoucherModel
+
+@{
+    ViewData["Title"] = "Create Voucher";
+}
+
+
+
+
+<div class="container mt-4">
+    <h2 class="mb-4">Create Voucher</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+
+    <form asp-action="Create" method="post">
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label>Voucher Type</label>
+                <select asp-for="VoucherType" id="VoucherType" class="form-control">
+                <option value="">Select Voucher Type</option>
+                <option value="journal">Journal Vouchers</option>
+                <option value="payment">Payment Vouchers</option>
+                <option value="receipt">Receipt Vouchers</option>
+                </select>
+                <span asp-validation-for="VoucherType" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label>Voucher Date</label>
+                <input asp-for="VoucherDate" type="date" class="form-control" />
+                <span asp-validation-for="VoucherDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-4">
+                <label>Reference No</label>
+                <input asp-for="ReferenceNo" id="ReferenceNo" class="form-control" />
+                <span asp-validation-for="ReferenceNo" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label>Created By</label>
+                <input asp-for="CreatedBy" id="CreatedBy" class="form-control" disabled/>
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+        </div>
+
+        <h4 class="mt-4">Voucher Details</h4>
+
+        <table class="table table-bordered" id="voucherDetailsTable">
+            <thead>
+                <tr>
+                    <th>Account Id</th>
+                    <th>Debit</th>
+                    <th>Credit</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.VoucherDetails.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <select name="VoucherDetails[@i].AccountId" class="form-control" required>
+                                <option value="">Select Account</option>
+                                @foreach (var acc in (List<string>)ViewBag.AccountList)
+                                {
+                                    <option value="@acc">@acc</option>
+                                }
+                            </select>
+                        </td>
+                        <td><input  name="VoucherDetails[@i].Debit" class="form-control" /></td>
+                        <td><input  name="VoucherDetails[@i].Credit" class="form-control" /></td>
+                        <td><input name="VoucherDetails[@i].Description" class="form-control" /></td>
+                        <td><button type="button" class="btn btn-danger btn-sm removeRow">Remove</button></td>
+                    </tr>
+                }
+
+                
+            </tbody>
+
+           
+
+        </table> 
+
+        
+
+        <button type="button" id="addRow" class="btn btn-primary btn-sm mb-3">Add Row</button>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Save Voucher</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+
+    <script>
+        $(document).ready(function () {
+
+          
+
+          function generateReferenceNo(voucherType, createdBy) {
+            const prefixes = {
+                'journal': 'JV',
+                'payment': 'PV',
+                'receipt': 'RV'
+            };
+
+            let prefix = prefixes[voucherType];
+            if (!prefix) return '';
+
+            let now = new Date();
+            let dateTimePart = '{'+now.getFullYear() + '-' +
+                String(now.getMonth() + 1).padStart(2, '0') + '-' +
+                String(now.getDate()).padStart(2, '0') + '}-{' +
+                String(now.getHours()).padStart(2, '0') + '-' +
+                String(now.getMinutes()).padStart(2, '0') + '-' +
+                String(now.getSeconds()).padStart(2, '0')+'}';
+
+            return `${prefix}-${dateTimePart}-${createdBy}`;
+        }
+
+
+        $('#VoucherType').on('change', function () {
+            let voucherType = $(this).val();
+            let createdBy = $('#CreatedBy').val().trim();
+            if (voucherType && createdBy) {
+                let refNo = generateReferenceNo(voucherType, createdBy);
+                $('#ReferenceNo').val(refNo);
+            } else {
+                $('#ReferenceNo').val('');
+            }
+        });
+
+
+
+            let rowIdx = @Model.VoucherDetails.Count;
+
+           
+
+            // Store the account options into JS array
+            let accountOptions = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject((List<string>)ViewBag.AccountList));
+
+            $("#addRow").click(function () {
+                let optionsHtml = '<option value="">Select Account</option>';
+                accountOptions.forEach(function (acc) {
+                    optionsHtml += `<option value="${acc}">${acc}</option>`;
+                });
+
+                let newRow = `
+                    <tr>
+                        <td>
+                            <select name="VoucherDetails[${rowIdx}].AccountId" class="form-control" required>
+                                ${optionsHtml}
+                            </select>
+                        </td>
+                        <td><input  name="VoucherDetails[${rowIdx}].Debit" class="form-control" /></td>
+                        <td><input  name="VoucherDetails[${rowIdx}].Credit" class="form-control" /></td>
+                        <td><input name="VoucherDetails[${rowIdx}].Description" class="form-control" /></td>
+                        <td><button type="button" class="btn btn-danger btn-sm removeRow">Remove</button></td>
+                    </tr>`;
+                $("#voucherDetailsTable tbody").append(newRow);
+                rowIdx++;
+            });
+
+            $(document).on("click", ".removeRow", function () {
+                $(this).closest("tr").remove();
+            });
+
+
+                   
+        
+       
+
+        
+        }); 
+
+
+
+               
+
+    </script>
+}

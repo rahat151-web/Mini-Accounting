@@ -18,6 +18,12 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult AccessDenied()
+    {
+        return View();
+    }
+
+
     public IActionResult Privacy()
     {
         return View();
