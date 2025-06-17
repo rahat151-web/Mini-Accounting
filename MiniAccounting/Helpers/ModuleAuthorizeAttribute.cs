@@ -20,9 +20,11 @@ namespace MiniAccounting.Helpers
         {
             var httpContext = context.HttpContext;
 
-            if (!httpContext.User.Identity.IsAuthenticated)
+            var userId = httpContext.Session.GetString("UserId");
+
+            if (string.IsNullOrEmpty(userId))
             {
-                // Redirect to login page
+                // Not logged in
                 context.Result = new RedirectToActionResult("Login", "Auth", null);
                 return;
             }

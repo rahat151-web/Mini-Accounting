@@ -45,7 +45,7 @@
         <div class="row mb-3">
             <div class="col-md-4">
                 <label>Created By</label>
-                <input asp-for="CreatedBy" id="CreatedBy" class="form-control" disabled/>
+                <input asp-for="CreatedBy" id="CreatedBy" class="form-control" readonly/>
                 <span asp-validation-for="CreatedBy" class="text-danger"></span>
             </div>
         </div>
@@ -67,7 +67,7 @@
                 {
                     <tr>
                         <td>
-                            <select name="VoucherDetails[@i].AccountId" class="form-control" required>
+                            <select name="VoucherDetails[@i].AccountIdNum" class="form-control" required>
                                 <option value="">Select Account</option>
                                 @foreach (var acc in (List<string>)ViewBag.AccountList)
                                 {
@@ -159,7 +159,7 @@
                 let newRow = `
                     <tr>
                         <td>
-                            <select name="VoucherDetails[${rowIdx}].AccountId" class="form-control" required>
+                            <select name="VoucherDetails[${rowIdx}].AccountIdNum" class="form-control" required>
                                 ${optionsHtml}
                             </select>
                         </td>

@@ -137,6 +137,31 @@ namespace MiniAccounting.Data
             return accounts;
         }
 
+        public int GetAccountId(string code)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+
+                connection.Open();
+
+                var command = new SqlCommand("SELECT AccountId FROM Accounts WHERE AccountCode = @AcctCode", connection);
+                command.Parameters.AddWithValue("@AcctCode", code);
+
+                using SqlDataReader reader =  command.ExecuteReader();
+
+                if (reader.Read())
+                    return reader.GetInt32(0);
+
+                return -5;
+
+
+
+            }
+
+        }
+
+
+
 
 
     }

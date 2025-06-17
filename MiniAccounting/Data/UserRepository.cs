@@ -33,5 +33,27 @@ namespace MiniAccounting.Data
                 
             }
         }
+
+        public async Task<string> GetUserIdAsync(string userName)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+
+                await connection.OpenAsync();
+
+                var command = new SqlCommand("SELECT Id FROM AspNetUsers WHERE UserName = @UserName", connection);
+                command.Parameters.AddWithValue("@UserName", userName);
+
+                using SqlDataReader reader = await command.ExecuteReaderAsync();
+
+                if (reader.Read())
+                    return reader["Id"].ToString();
+
+                return null;
+
+
+
+            }
+        }
     }
 }
