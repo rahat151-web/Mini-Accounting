@@ -12,17 +12,17 @@ namespace MiniAccounting.Data
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public async Task<string> GetUserNameAsync(string userId)
+        public string GetUserName(string userId)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
                 
-                await connection.OpenAsync();
+                connection.Open();
 
                 var command = new SqlCommand("SELECT UserName FROM AspNetUsers WHERE Id = @UserId", connection);
                 command.Parameters.AddWithValue("@UserId", userId);
 
-                using SqlDataReader reader = await command.ExecuteReaderAsync();
+                using SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())
                     return reader["UserName"].ToString();

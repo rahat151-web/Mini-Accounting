@@ -37,7 +37,11 @@ namespace MiniAccounting.Data
 
             catch (SqlException ex)
             {
-                throw new RepositoryException("Failed to add account: " + ex.Message, ex);
+                throw new RepositoryException("An error occurred while saving voucher: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("An unexpected error occurred while saving voucher.", ex);
             }
 
 
@@ -47,36 +51,57 @@ namespace MiniAccounting.Data
 
         public void UpdateAccount(Accounts account)
         {
-            using SqlConnection con = new(_connectionString);
-            using SqlCommand cmd = new("sp_ManageChartOfAccounts", con);
-            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                using SqlConnection con = new(_connectionString);
+                using SqlCommand cmd = new("sp_ManageChartOfAccounts", con);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@Action", "UPDATE");
-            cmd.Parameters.AddWithValue("@AccountId", account.AccountId);
-            cmd.Parameters.AddWithValue("@AccountCode", account.AccountCode);
-            cmd.Parameters.AddWithValue("@AccountName", account.AccountName);
-            cmd.Parameters.AddWithValue("@ParentAccountId", account.ParentAccountId);
-            cmd.Parameters.AddWithValue("@AccountType", account.AccountType);
+                cmd.Parameters.AddWithValue("@Action", "UPDATE");
+                cmd.Parameters.AddWithValue("@AccountId", account.AccountId);
+                cmd.Parameters.AddWithValue("@AccountName", account.AccountName);
 
-            con.Open();
-            cmd.ExecuteNonQuery();
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+            }
+
+            catch (SqlException ex)
+            {
+                throw new RepositoryException("An error occurred while saving voucher: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("An unexpected error occurred while saving voucher.", ex);
+            }
+
+
         }
 
         public void DeleteAccount(Accounts account)
         {
-            using SqlConnection con = new(_connectionString);
-            using SqlCommand cmd = new("sp_ManageChartOfAccounts", con);
-            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                using SqlConnection con = new(_connectionString);
+                using SqlCommand cmd = new("sp_ManageChartOfAccounts", con);
+                cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@Action", "DELETE");
-            cmd.Parameters.AddWithValue("@AccountId", account.AccountId);
-            cmd.Parameters.AddWithValue("@AccountCode", account.AccountCode);
-            cmd.Parameters.AddWithValue("@AccountName", account.AccountName);
-            cmd.Parameters.AddWithValue("@ParentAccountId", account.ParentAccountId);
-            cmd.Parameters.AddWithValue("@AccountType", account.AccountType);
+                cmd.Parameters.AddWithValue("@Action", "DELETE");
+                cmd.Parameters.AddWithValue("@AccountId", account.AccountId);
 
-            con.Open();
-            cmd.ExecuteNonQuery();
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (SqlException ex)
+            {
+                throw new RepositoryException("An error occurred while saving voucher: " + ex.Message, ex);
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("An unexpected error occurred while saving voucher.", ex);
+            }
+
         }
 
         public List<Accounts> GetAccountsByParent(int? parentAccountId)
@@ -153,6 +178,39 @@ namespace MiniAccounting.Data
                     return reader.GetInt32(0);
 
                 return -5;
+
+
+
+            }
+
+        }
+
+        public Accounts GetAccountDetails(int id)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+
+                connection.Open();
+
+                var command = new SqlCommand("SELECT AccountId, AccountCode, AccountName, AccountType FROM Accounts WHERE AccountId = @AcctId", connection);
+                command.Parameters.AddWithValue("@AcctId", id);
+
+                using SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Accounts
+                    {
+                        AccountId = reader.GetInt32(0),
+                        AccountCode = reader.GetString(1),
+                        AccountName = reader.GetString(2),
+                        AccountType = reader.GetString(3)
+                       
+                    };
+                }
+                    
+
+                return null;
 
 
 

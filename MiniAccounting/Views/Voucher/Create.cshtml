@@ -10,9 +10,19 @@
 <div class="container mt-4">
     <h2 class="mb-4">Create Voucher</h2>
 
-    @if (TempData["Success"] != null)
+    @if (ViewBag.ErrorMessage != null || TempData["Success"] != null)
     {
-        <div class="alert alert-success">@TempData["Success"]</div>
+        var isSuccess = TempData["Success"] != null;
+        var alertClass = isSuccess ? "alert-success" : "alert-danger";
+        var iconClass = isSuccess ? "bi-check-circle-fill" : "bi-exclamation-circle-fill";
+        var messageText = isSuccess ? TempData["Success"] : ViewBag.ErrorMessage;
+        <div id="messageCard" class="alert @alertClass alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3 py-2 px-3 small" role="alert" style="max-width: 600px;">
+            <i class="bi @iconClass me-2 fs-5"></i>
+            <div class="flex-grow-1">
+                @messageText
+            </div>
+            <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     }
 
     <form asp-action="Create" method="post">
@@ -20,7 +30,7 @@
         <div class="row mb-3">
             <div class="col-md-4">
                 <label>Voucher Type</label>
-                <select asp-for="VoucherType" id="VoucherType" class="form-control">
+                <select asp-for="VoucherType" id="VoucherType" class="form-control" required>
                 <option value="">Select Voucher Type</option>
                 <option value="journal">Journal Vouchers</option>
                 <option value="payment">Payment Vouchers</option>
@@ -38,7 +48,6 @@
             <div class="col-md-4">
                 <label>Reference No</label>
                 <input asp-for="ReferenceNo" id="ReferenceNo" class="form-control" />
-                <span asp-validation-for="ReferenceNo" class="text-danger"></span>
             </div>
         </div>
 
@@ -75,8 +84,20 @@
                                 }
                             </select>
                         </td>
-                        <td><input  name="VoucherDetails[@i].Debit" class="form-control" /></td>
-                        <td><input  name="VoucherDetails[@i].Credit" class="form-control" /></td>
+                        <td>
+                            <input name="VoucherDetails[@i].Debit" class="form-control" type="number"
+                                   step="0.01"
+                                   min="0"
+                                   required
+                                   placeholder="0.00" />
+                        </td>
+                        <td>
+                            <input name="VoucherDetails[@i].Credit" class="form-control" type="number"
+                                   step="0.01"
+                                   min="0"
+                                   required
+                                   placeholder="0.00" />
+                        </td>
                         <td><input name="VoucherDetails[@i].Description" class="form-control" /></td>
                         <td><button type="button" class="btn btn-danger btn-sm removeRow">Remove</button></td>
                     </tr>
@@ -105,6 +126,8 @@
 
     <script>
         $(document).ready(function () {
+
+            
 
           
 
@@ -163,8 +186,14 @@
                                 ${optionsHtml}
                             </select>
                         </td>
-                        <td><input  name="VoucherDetails[${rowIdx}].Debit" class="form-control" /></td>
-                        <td><input  name="VoucherDetails[${rowIdx}].Credit" class="form-control" /></td>
+                        <td><input  name="VoucherDetails[${rowIdx}].Debit" class="form-control" step="0.01"
+                                   min="0"
+                                   required
+                                   placeholder="0.00" /></td>
+                        <td><input  name="VoucherDetails[${rowIdx}].Credit" class="form-control" step="0.01"
+                                   min="0"
+                                   required
+                                   placeholder="0.00" /></td>
                         <td><input name="VoucherDetails[${rowIdx}].Description" class="form-control" /></td>
                         <td><button type="button" class="btn btn-danger btn-sm removeRow">Remove</button></td>
                     </tr>`;

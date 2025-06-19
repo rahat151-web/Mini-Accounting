@@ -4,7 +4,42 @@
     ViewData["Title"] = "Create Account";
 }
 
-<h2>Create Student</h2>
+<h2>Create Student</h2> 
+
+@* @if (ViewBag.ErrorMessage != null || TempData["Success"] != null)
+{
+    var isSuccess = TempData["Success"] != null;
+    var alertClass = isSuccess ? "alert-success" : "alert-danger";
+    var iconClass = isSuccess ? "bi-check-circle-fill" : "bi-exclamation-circle-fill";
+    var messageText = isSuccess ? TempData["Success"] : ViewBag.ErrorMessage;
+    <div id="messageCard" class="alert @alertClass alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3 py-2 px-3 small" role="alert" style="max-width: 600px;">
+        <i class="bi @iconClass me-2 fs-5"></i>
+        <div class="flex-grow-1">
+            @messageText
+        </div>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+} *@
+
+
+@if (ViewBag.ErrorMessage != null || TempData["Success"] != null)
+{
+    var isSuccess = TempData["Success"] != null;
+    var alertClass = isSuccess ? "alert-success" : "alert-danger";
+    var iconClass = isSuccess ? "bi-check-circle-fill" : "bi-exclamation-circle-fill";
+    var messageText = isSuccess ? TempData["Success"] : ViewBag.ErrorMessage;
+    <div id="messageCard" class="alert @alertClass alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3 py-2 px-3 small" role="alert" style="max-width: 600px;">
+        <i class="bi @iconClass me-2 fs-5"></i>
+        <div class="flex-grow-1">
+            @messageText
+            @if (isSuccess)
+            {
+                <a href="@Url.Action("Index", "Accounts")" >See all accounts</a>
+            }
+        </div>
+        <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 
 <form asp-action="Create" method="post">
     <div class="form-group">

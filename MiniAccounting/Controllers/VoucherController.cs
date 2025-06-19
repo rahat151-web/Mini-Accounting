@@ -26,22 +26,19 @@ namespace MiniAccounting.Controllers
             _contextAccessor = contextAccessor;
             _userRepository = userRepository;
         }
-        
 
-        [HttpGet]
-        public async Task<IActionResult> Create()
+        private VoucherModel PopulateViewData()
         {
-
             string userId, userName;
 
             do
             {
                 userId = _contextAccessor.HttpContext.Session.GetString("UserId");
-                userName = await _userRepository.GetUserNameAsync(userId);
+                userName =  _userRepository.GetUserName(userId);
 
             } while (userName == null);
 
-            
+
 
 
             var model = new VoucherModel
@@ -58,16 +55,48 @@ namespace MiniAccounting.Controllers
 
             ViewBag.AccountList = accountList;
 
-            return View(model);
+            return model;
+        }
+
+
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        { 
+
+            return View(PopulateViewData());
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(VoucherModel model)
         {
             if (!ModelState.IsValid)
-                return View(model);
+            {
+                ViewBag.ErrorMessage = "Check your data whether something missing or not.";
+                return View(PopulateViewData());
+
+            }
+
+            
+
+            decimal total_debit = 0;
+            decimal total_credit = 0;
 
             foreach(var data in model.VoucherDetails)
+            {
+                total_debit += data.Debit;
+
+                total_credit += data.Credit;
+            }
+
+            if (total_credit != total_debit)
+            {
+                ViewBag.ErrorMessage = "Total debit must be equals to total credit";
+                return View(PopulateViewData());
+            }
+
+
+            foreach (var data in model.VoucherDetails)
             {
                 string acctCode =  data.AccountIdNum.ToString();
                 int acctId = -2;
@@ -91,23 +120,28 @@ namespace MiniAccounting.Controllers
             try
             {
                 _voucherRepository.SaveVoucher(model.VoucherType, model.VoucherDate,
-                   model.ReferenceNo, userId, dataTableData);
+                 model.ReferenceNo, userId, dataTableData);
+
+                TempData["Success"] = "Voucher created successfully";
+
+
+
 
 
             }
             catch (RepositoryException ex)
             {
-                ModelState.AddModelError("", ex.Message);
+                ViewBag.ErrorMessage =  ex.Message;
                 // optionally log ex.InnerException
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "An unexpected error occurred.");
+                ViewBag.ErrorMessage =  ex.Message;
                 // optionally log ex
             }
 
             
-            return View(model);
+            return View(PopulateViewData());
 
 
         }
