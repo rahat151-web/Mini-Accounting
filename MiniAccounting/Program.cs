@@ -17,6 +17,22 @@ builder.Services.AddScoped<AuthorizationService>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var _repository = scope.ServiceProvider.GetRequiredService<ManageUsersRepository>();
+
+    if (!await _repository.UserExistsAsync("admin")) 
+    {
+        await _repository.CreateUserAsync(
+            username: "admin",
+            email: "admin@accountingbd.com",
+            password: "Admin@1234",
+            phoneNumber: "0123456789",
+            roleName: "Admin"
+        );
+    }
+}
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

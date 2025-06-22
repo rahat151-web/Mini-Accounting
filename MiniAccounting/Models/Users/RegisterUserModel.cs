@@ -1,5 +1,4 @@
-﻿using MiniAccounting.Validators;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MiniAccounting.Models.Users
 {
@@ -16,7 +15,7 @@ namespace MiniAccounting.Models.Users
         public string Email { get; set; }
 
         [Required]
-        //[StrongPassword]
+        
         public string Password { get; set; }
 
         [Required]

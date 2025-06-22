@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using MiniAccounting.Models;
 using MiniAccounting.Models.Users;
+using System;
 using System.Data;
 using System.Reflection;
 
@@ -14,6 +15,68 @@ namespace MiniAccounting.Data
         public ManageUsersRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
+
+        public async Task CreateUserAsync(string username, string email, string password, string phoneNumber, string roleName)
+        {
+            var user = new IdentityUser
+            {
+                Id = Guid.NewGuid().ToString(),
+                UserName = username,
+                NormalizedUserName = username.ToUpper(),
+                Email = email,
+                NormalizedEmail = email.ToUpper(),
+                EmailConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                PhoneNumber = phoneNumber,
+                PhoneNumberConfirmed = true,
+                TwoFactorEnabled = false,
+                LockoutEnd = null,
+                LockoutEnabled = true,
+                AccessFailedCount = 0
+            };
+
+            var passwordHasher = new PasswordHasher<IdentityUser>();
+            user.PasswordHash = passwordHasher.HashPassword(user, password);
+
+            await ManageUserAsync("INSERT", user, roleName);
+        }
+
+        public async Task UpdateUserAsync(string Id, string email, string password, string phoneNumber, string roleName)
+        {
+            var user = new IdentityUser
+            {
+                Id = Id,
+                Email = email,
+                NormalizedEmail = email.ToUpper(),
+                EmailConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                PhoneNumber = phoneNumber,
+                PhoneNumberConfirmed = true,
+                TwoFactorEnabled = false,
+                LockoutEnd = null,
+                LockoutEnabled = true,
+                AccessFailedCount = 0
+            };
+
+            if (password == null)
+            {
+                user.PasswordHash = null;
+            }
+
+            else
+            {
+                var passwordHasher = new PasswordHasher<IdentityUser>();
+                user.PasswordHash = passwordHasher.HashPassword(user, password);
+            }
+
+            await ManageUserAsync("UPDATE", user, roleName);
+
+
+
+            
         }
 
         public async Task ManageUserAsync(string action, IdentityUser user, string roleName)
@@ -84,7 +147,8 @@ namespace MiniAccounting.Data
                 "From AspNetUsers a Inner JOIN AspNetUserRoles b " +
                 "ON a.Id = b.UserId " +
                 "Inner JOIN AspNetRoles c " +
-                "ON b.RoleId = c.Id;", con);
+                "ON b.RoleId = c.Id "+
+                "WHERE c.Name <> 'Admin'", con);
 
                 await con.OpenAsync();
                 using SqlDataReader reader = cmd.ExecuteReader();
@@ -139,6 +203,46 @@ namespace MiniAccounting.Data
 
 
         }
+
+        public async Task<bool> hasVoucherAsync(string Id)
+        {
+            using SqlConnection con = new(_connectionString);
+            using SqlCommand cmd = new("select a.UserName "+
+            "from AspNetUsers a Inner Join Vouchers v "+
+            "ON a.Id = v.CreatedBy "+
+            "where a.Id = @UserId", con);
+
+            cmd.Parameters.AddWithValue("@UserId", Id);
+
+            await con.OpenAsync();
+            using SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+                return true;
+
+
+
+            
+
+            return false;
+
+        }
+
+        public async Task DeleteUserAsync(string Id)
+        {
+            var user = new IdentityUser
+            {
+                Id = Id
+            };
+
+            await ManageUserAsync("DELETE", user, null);
+
+
+
+
+        }
+
+
 
     }
 }

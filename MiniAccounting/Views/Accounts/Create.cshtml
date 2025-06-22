@@ -2,24 +2,14 @@
 
 @{
     ViewData["Title"] = "Create Account";
+    var parentData = ViewBag.parentAcct;
 }
+<div class="text-center">
+    <h2>Create account</h2>
 
-<h2>Create Student</h2> 
+</div>
 
-@* @if (ViewBag.ErrorMessage != null || TempData["Success"] != null)
-{
-    var isSuccess = TempData["Success"] != null;
-    var alertClass = isSuccess ? "alert-success" : "alert-danger";
-    var iconClass = isSuccess ? "bi-check-circle-fill" : "bi-exclamation-circle-fill";
-    var messageText = isSuccess ? TempData["Success"] : ViewBag.ErrorMessage;
-    <div id="messageCard" class="alert @alertClass alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3 py-2 px-3 small" role="alert" style="max-width: 600px;">
-        <i class="bi @iconClass me-2 fs-5"></i>
-        <div class="flex-grow-1">
-            @messageText
-        </div>
-        <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-} *@
+
 
 
 @if (ViewBag.ErrorMessage != null || TempData["Success"] != null)
@@ -41,7 +31,17 @@
     </div>
 }
 
+@if (parentData != null)
+{
+    <strong class="text-primary">Create child of @parentData.AccountCode - @parentData.AccountName</strong>
+}
+
 <form asp-action="Create" method="post">
+
+
+    <input type="hidden" asp-for="ParentAccountId" />
+
+
     <div class="form-group">
         <label asp-for="AccountCode"></label>
         <input asp-for="AccountCode" class="form-control" />
@@ -54,15 +54,21 @@
         <span asp-validation-for="AccountName" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="ParentAccountId"></label>
-        <input asp-for="ParentAccountId" class="form-control" />
-        <span asp-validation-for="ParentAccountId" class="text-danger"></span>
-    </div>
+
 
     <div class="form-group">
         <label asp-for="AccountType"></label>
-        <input asp-for="AccountType" class="form-control" />
+        @if (parentData != null)
+        {
+            <input value="@parentData.AccountType" asp-for="AccountType" class="form-control" readonly />
+
+        }
+
+        else
+        {
+            <input asp-for="AccountType" class="form-control" />
+
+        }
         <span asp-validation-for="AccountType" class="text-danger"></span>
     </div>
 

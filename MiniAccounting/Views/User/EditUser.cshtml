@@ -6,7 +6,7 @@
 
 <h2 class="mb-4 text-center">Edit User</h2>
 
-<form asp-action="UpdateUser" method="post" class="w-50 mx-auto">
+<form asp-action="EditUser" method="post" class="w-50 mx-auto">
 
     @* Hidden Id *@
     <input type="hidden" asp-for="Id" />
@@ -28,23 +28,41 @@
         <span asp-validation-for="PhoneNumber" class="text-danger"></span>
     </div>
 
-    <div class="form-group mb-3">
-        <label asp-for="RoleName" class="form-label"></label>
-        <select asp-for="RoleName" class="form-control">
-            <option value="@Model.RoleName">@Model.RoleName</option>
+    @if (ViewBag.RoleName == "Admin")
+    {
+        <div class="form-group mb-3">
+            <label asp-for="RoleName" class="form-label"></label>
+            <input asp-for="RoleName" class="form-control" readonly />
 
-            @if (Model.RoleName != "Viewer")
-            {
-                <option value="Viewer">Viewer</option>
-            }
-            @if (Model.RoleName != "Accountant")
-            {
-                <option value="Accountant">Accountant</option>
-            }
-            
-        </select>
-        <span asp-validation-for="RoleName" class="text-danger"></span>
-    </div>
+        </div>
+    }
+
+    else
+    {
+        <div class="form-group mb-3">
+            <label asp-for="RoleName" class="form-label"></label>
+            <select asp-for="RoleName" class="form-control">
+                <option value="@Model.RoleName">@Model.RoleName</option>
+
+
+                @if (Model.RoleName != "Viewer")
+                {
+                    <option value="Viewer">Viewer</option>
+                }
+                @if (Model.RoleName != "Accountant")
+                {
+                    <option value="Accountant">Accountant</option>
+                }
+
+            </select>
+            <span asp-validation-for="RoleName" class="text-danger"></span>
+        </div>
+    }
+
+    
+    
+
+    
 
     <div class="form-group mb-3 text-center">
         <button type="button" class="btn btn-outline-primary btn-lg" id="changePasswordBtn">

@@ -46,7 +46,7 @@ namespace MiniAccounting.Controllers
 
                 if (!reader.Read())
                 {
-                    ViewBag.Error = "Invalid credentials";
+                    ModelState.AddModelError("UserName", "UserName does not exists");
                     return View(model);
                 }
 
@@ -60,7 +60,7 @@ namespace MiniAccounting.Controllers
 
                 if (result != PasswordVerificationResult.Success)
                 {
-                    ViewBag.Error = "Invalid credentials";
+                    ModelState.AddModelError("Password", "Wrong password.");
                     return View(model);
                 }
 
@@ -110,12 +110,13 @@ namespace MiniAccounting.Controllers
                 HttpContext.Session.SetString("RoleName", roleName);
                 HttpContext.Session.SetString("Permissions", JsonSerializer.Serialize(permissions));
 
-                return RedirectToAction("Create", "Voucher");
+                return RedirectToAction("Index", "Accounts");
             }
 
          
     }
-
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();

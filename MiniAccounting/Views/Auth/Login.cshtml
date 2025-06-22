@@ -1,18 +1,28 @@
 ﻿@model LoginViewModel
 
-<h2>Login</h2>
 
-<form asp-action="Login" method="post">
-    <div>
-        <label asp-for="UserName"></label>
-        <input asp-for="UserName" />
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow p-4" style="min-width: 350px;">
+        <h3 class="text-center mb-4">Login</h3>
+
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
     </div>
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" />
-    </div>
-    <button type="submit">Login</button>
-</form>
+</div>
 
 @if (ViewBag.Error != null)
 {
