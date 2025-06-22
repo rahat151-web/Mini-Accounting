@@ -2,6 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
+@if (TempData["Success"] != null)
+{
+    <div class="d-flex justify-content-center">
+        <div id="messageCard" class="alert alert-success alert-dismissible fade show shadow-sm rounded-3 py-2 px-3 small mx-auto w-100" role="alert" style="max-width: 600px;">
+            <div class="d-flex align-items-center">
+                <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+                <div class="flex-grow-1">
+                    @TempData["Success"]
+                </div>
+            </div>
+            <button type="button" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+}
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

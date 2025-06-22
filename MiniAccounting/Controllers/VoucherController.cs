@@ -124,6 +124,8 @@ namespace MiniAccounting.Controllers
 
                 TempData["Success"] = "Voucher created successfully";
 
+                return RedirectToAction("Index", "Home");
+
 
 
 

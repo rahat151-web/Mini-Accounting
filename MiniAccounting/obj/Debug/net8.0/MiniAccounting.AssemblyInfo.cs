@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniAccounting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c59d28732e3ffa8a864244a88cf7e21f70430fcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+196e2ca1498b373dcc5b68e77033dab613e73de9")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniAccounting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniAccounting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -47,7 +47,15 @@
 </style>
 
 
-<h2 class="mb-4">Account Hierarchy</h2>
+<h2 class="mb-4">Account Hierarchy</h2> 
+
+  @if (ViewBag.RoleName!="Viewer")
+  {
+
+        <a asp-action="Create" class="btn btn-success mt-3 mb-3">
+             Add New Account
+        </a>
+  }
 
 <ul id="accountTree">
     @foreach (var account in Model)
