@@ -1,6 +1,6 @@
 Alhamdulillah, by the blessings of Allah, I completed the project almost.
 
-# Mini Account Management System
+# Mini Accounting Management System
 
 - Different types of accounts can be added.
 - Accounts are shown as a parent-child tree.
